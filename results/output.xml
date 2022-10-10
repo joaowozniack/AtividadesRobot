@@ -1,29 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221010 11:06:39.801" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221010 11:33:17.376" rpa="false" schemaversion="3">
 <suite id="s1" name="AtividadesRobot" source="C:\MAMP\htdocs\AtividadesRobot">
 <suite id="s1-s1" name="Robot" source="C:\MAMP\htdocs\AtividadesRobot\Robot">
 <suite id="s1-s1-s1" name="PesquisaEmAcao" source="C:\MAMP\htdocs\AtividadesRobot\Robot\PesquisaEmAcao">
 <suite id="s1-s1-s1-s1" name="Link" source="C:\MAMP\htdocs\AtividadesRobot\Robot\PesquisaEmAcao\link.robot">
-<test id="s1-s1-s1-s1-t1" name="Cenário 1: Acessando o site" line="12">
-<kw name="Abrir Site">
+<test id="s1-s1-s1-s1-t1" name="Cenário 1: Selenciando um produto" line="13">
+<kw name="Selecionar Produto">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://centauro.com.br/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221010 11:06:40.158" level="INFO">Opening browser 'chrome' to base url 'https://centauro.com.br/'.</msg>
-<status status="PASS" starttime="20221010 11:06:40.158" endtime="20221010 11:06:44.002"/>
+<msg timestamp="20221010 11:33:17.793" level="INFO">Opening browser 'chrome' to base url 'https://centauro.com.br/'.</msg>
+<status status="PASS" starttime="20221010 11:33:17.792" endtime="20221010 11:33:22.470"/>
 </kw>
-<status status="PASS" starttime="20221010 11:06:40.157" endtime="20221010 11:06:44.003"/>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.centauro.com.br/checkouts/carrinho/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221010 11:33:22.471" level="INFO">Opening url 'https://www.centauro.com.br/checkouts/carrinho/'</msg>
+<status status="PASS" starttime="20221010 11:33:22.470" endtime="20221010 11:33:23.225"/>
 </kw>
-<status status="PASS" starttime="20221010 11:06:40.155" endtime="20221010 11:06:44.003"/>
+<status status="PASS" starttime="20221010 11:33:17.791" endtime="20221010 11:33:23.226"/>
+</kw>
+<status status="PASS" starttime="20221010 11:33:17.789" endtime="20221010 11:33:23.227"/>
 </test>
-<status status="PASS" starttime="20221010 11:06:39.869" endtime="20221010 11:06:44.006"/>
+<status status="PASS" starttime="20221010 11:33:17.426" endtime="20221010 11:33:23.229"/>
 </suite>
-<status status="PASS" starttime="20221010 11:06:39.862" endtime="20221010 11:06:44.014"/>
+<status status="PASS" starttime="20221010 11:33:17.423" endtime="20221010 11:33:23.234"/>
 </suite>
-<status status="PASS" starttime="20221010 11:06:39.857" endtime="20221010 11:06:44.020"/>
+<status status="PASS" starttime="20221010 11:33:17.420" endtime="20221010 11:33:23.237"/>
 </suite>
-<status status="PASS" starttime="20221010 11:06:39.808" endtime="20221010 11:06:44.026"/>
+<status status="PASS" starttime="20221010 11:33:17.383" endtime="20221010 11:33:23.239"/>
 </suite>
 <statistics>
 <total>

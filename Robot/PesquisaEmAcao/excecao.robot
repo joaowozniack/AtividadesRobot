@@ -1,10 +1,16 @@
-*** Settings ***
-Library    SeleniumLibrary
+* Settings *
+Library     SeleniumLibrary
 
-*** Variables ***
+* Variables *
 
+* Keywords *
+Falha Abrir Site
+    TRY
+        Open Browser   https://centauroo.com.br/  chrome
+    EXCEPT
+        Log    EXCEPT with no arguments catches any exception.
+    END
 
-*** Keywords ***
-
-
-*** Test Cases ***
+* Test Cases *
+Cenário 1: Falha ao tentar acessar o site
+    Falha Abrir Site

@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221006 16:12:09.178" rpa="false" schemaversion="3">
-<suite id="s1" name="Modelo" source="C:\Users\joaow\Desktop\PUCPR\VERIFICAÇÃO E VALIDAÇÃO\EM PROCESSO\TesteRobot\modelo.robot">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221010 10:40:29.762" rpa="false" schemaversion="3">
+<suite id="s1" name="Modelo" source="C:\MAMP\htdocs\AtividadesRobot\Robot\Amazon\modelo.robot">
 <test id="s1-t1" name="Cenário 1: Acessando o site" line="13">
 <kw name="Abrir Site">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://robotframework.org/</arg>
+<arg>https://amazon.com.br/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221006 16:12:09.607" level="INFO">Opening browser 'chrome' to base url 'https://robotframework.org/'.</msg>
-<msg timestamp="20221006 16:12:09.631" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg timestamp="20221006 16:12:09.636" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
-</msg>
-<status status="FAIL" starttime="20221006 16:12:09.606" endtime="20221006 16:12:09.636"/>
+<msg timestamp="20221010 10:40:30.105" level="INFO">Opening browser 'chrome' to base url 'https://amazon.com.br/'.</msg>
+<status status="PASS" starttime="20221010 10:40:30.105" endtime="20221010 10:40:34.709"/>
 </kw>
-<status status="FAIL" starttime="20221006 16:12:09.606" endtime="20221006 16:12:09.636"/>
+<status status="PASS" starttime="20221010 10:40:30.104" endtime="20221010 10:40:34.709"/>
 </kw>
-<status status="FAIL" starttime="20221006 16:12:09.605" endtime="20221006 16:12:09.636">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
-</status>
+<status status="PASS" starttime="20221010 10:40:30.103" endtime="20221010 10:40:34.710"/>
 </test>
-<status status="FAIL" starttime="20221006 16:12:09.182" endtime="20221006 16:12:09.636"/>
+<status status="PASS" starttime="20221010 10:40:29.762" endtime="20221010 10:40:34.711"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Modelo">Modelo</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Modelo">Modelo</stat>
 </suite>
 </statistics>
 <errors>

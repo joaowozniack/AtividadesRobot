@@ -1,146 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221010 10:55:33.453" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221010 11:06:39.801" rpa="false" schemaversion="3">
 <suite id="s1" name="AtividadesRobot" source="C:\MAMP\htdocs\AtividadesRobot">
 <suite id="s1-s1" name="Robot" source="C:\MAMP\htdocs\AtividadesRobot\Robot">
 <suite id="s1-s1-s1" name="PesquisaEmAcao" source="C:\MAMP\htdocs\AtividadesRobot\Robot\PesquisaEmAcao">
-<suite id="s1-s1-s1-s1" name="Requisicao" source="C:\MAMP\htdocs\AtividadesRobot\Robot\PesquisaEmAcao\requisicao.robot">
-<test id="s1-s1-s1-s1-t1" name="Quick Get Request Test" line="5">
-<kw name="GET" library="RequestsLibrary">
-<var>${response}</var>
-<arg>https://www.centauro.com</arg>
-<doc>Sends a GET request.</doc>
-<msg timestamp="20221010 10:55:34.152" level="INFO">GET Request : url=https://www.centauro.com/ 
- path_url=/ 
- headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg timestamp="20221010 10:55:34.153" level="INFO">GET Response : url=https://www.centauro.com/ 
- status=200, reason=OK 
- headers={'Date': 'Mon, 10 Oct 2022 13:55:37 GMT', 'Server': 'Apache/2.4.54 (Amazon) OpenSSL/1.0.2k-fips PHP/5.6.40', 'X-Powered-By': 'PHP/5.6.40', 'Set-Cookie': 'CAKEPHP=53cib92o0mgr8fe4a5aajt8i60; expires=Mon, 10-Oct-2022 17:55:38 GMT; Max-Age=14400; path=/; secure; HttpOnly', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Content-Length': '1683', 'Keep-Alive': 'timeout=5, max=100', 'Connection': 'Keep-Alive', 'Content-Type': 'text/html; charset=UTF-8'} 
- body=&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-	&lt;head&gt;
-		&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;		&lt;title&gt;
-
-		&lt;/title&gt;
-		&lt;link href="/favicon.ico" type="image/x-icon" rel="icon"/&gt;&lt;link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"/&gt;
-	&lt;link rel="stylesheet" type="text/css" href="/css/../scss/bootstrap4/bootstrap.css"/&gt;
-	&lt;link rel="stylesheet" type="text/css" href="/css/plugins/slick-2.css"/&gt;
-	&lt;link rel="stylesheet" type="text/css" href="/css/animate.css"/&gt;
-	&lt;link rel="stylesheet" type="text/css" href="/css/../scss/style.css"/&gt;
-	&lt;link rel="stylesheet" type="text/css" href="/css/../scss/custom.css"/&gt;
-
-		&lt;!--end::Web font --&gt;
-		&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"&gt;
-		&lt;!-- FONT AWESOME --&gt;
-		&lt;link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous"&gt;
-		&lt;link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet"&gt;
-
-		
-		&lt;!-- Google Tag Manager --&gt;
-		&lt;script&gt;(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-THRZMSM');&lt;/script&gt;
-		&lt;!-- End Google Tag Manager --&gt;
-
-
-
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;!-- Google Tag Manager (noscript) --&gt;
-		&lt;noscript&gt;&lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THRZMSM"
-		height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;&lt;/noscript&gt;
-		&lt;!-- End Google Tag Manager (noscript) --&gt;
-
-		
-				&lt;main&gt;
-			&lt;section class="lazy abertura fadeIn2 d-md-flex align-items-center pt-sm-5 pt-md-0"&gt;
-	&lt;div class="traducao-entrada"&gt;
-		&lt;div class="tradutor pl-3 pl-lg-0 pr-lg-2"&gt;
-			&lt;div style="position: relative; display: inline-block"&gt;
-									&lt;span class="span-bg" style="display: inline-block;" data-toggle="dropdown" aria-expanded="false"&gt;
-						&lt;img src="img/svg/brasil.svg" class="dropdown-item p-0" alt=""&gt;
-						&lt;i class="fa fa-angle-down mt-1 text-white"&gt;&lt;/i&gt;
-					&lt;/span&gt;
-								&lt;ul class="dropdown-menu mt-3"&gt;
-					&lt;li class="p-1"&gt;
-						&lt;a href="/app/trocaLingua/pt-br"&gt;
-							&lt;img src="img/svg/brasil.svg" class="dropdown-item p-0" alt=""&gt;
-						&lt;/a&gt;
-					&lt;/li&gt;
-					&lt;li class="p-1"&gt;
-						&lt;a href="/app/trocaLingua/spa"&gt;
-							&lt;img src="img/svg/col-flag.svg" class="dropdown-item p-0" alt=""&gt;
-						&lt;/a&gt;
-					&lt;/li&gt;
-					&lt;li class="p-1"&gt;
-						&lt;a href="/app/trocaLingua/eng"&gt;
-							&lt;img src="img/svg/eua.svg" class="dropdown-item p-0" alt=""&gt;
-						&lt;/a&gt;
-					&lt;/li&gt;
-				&lt;/ul&gt;
-			&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;!-- VERIFICA O PAÍS PARA DIRECIONAR A TAB DE CURSOS --&gt;
-		&lt;div class="container"&gt;
-		&lt;div class="bem-vindo pt-4 mb-sm-5"&gt;
-			&lt;h2 class=""&gt;
-				Bem-vindo à			&lt;/h2&gt;
-		&lt;/div&gt;
-		&lt;p class="text-center mt-sm-5 mb-sm-5 mt-md-0"&gt;
-			&lt;img src="/img/logo_branco_big.png" class="logo-entrada" alt=""/&gt;		&lt;/p&gt;
-		&lt;div class="row d-flex justify-content-center text-center btns-entrada"&gt;
-			&lt;div class="col-12"&gt;
-				&lt;a class="btn btn-outline-primary px-0 px-sm-2 btn-lg mx-1 mb-4" href="/dublagem"&gt;
-					Dublagem				&lt;/a&gt;
-				&lt;a class="btn btn-outline-primary px-0 px-sm-2 btn-lg mx-1 mb-4" href="/cinema"&gt;
-					Cinema				&lt;/a&gt;
-				&lt;a class="btn btn-outline-primary px-0 px-sm-2 btn-lg mx-1 mb-4" href="/desenvolvimento-web"&gt;
-					Desenvolvimento web				&lt;/a&gt;
-				&lt;a class="btn btn-outline-primary px-0 px-sm-2 btn-lg mx-1 mb-4"  href="/agencia-digital"&gt;
-					Agência digital				&lt;/a&gt;
-				&lt;!--
-				&lt;a class="btn btn-outline-primary px-0 px-sm-2 btn-lg mx-1 mb-4"  href="/cursos-audiovisuais"&gt;
-					Cursos				&lt;/a&gt;--&gt;
-									&lt;a class="btn btn-outline-primary px-0 px-sm-2 btn-lg mx-1 mb-4"  href="/Blog"&gt;
-						Blog					&lt;/a&gt;
-							&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-&lt;/section&gt;		&lt;/main&gt;
-
-		
-	&lt;script type="text/javascript" src="/js/jquery.min.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="/js/popper.min.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="/js/bootstrap/bootstrap.min.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="/js/plugins/slick.min.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="/js/plugins/isotope.pkgd.min.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="/js/plugins/jquery.waypoints.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="/js/plugins/jquery.counterup.min.js"&gt;&lt;/script&gt;
-	&lt;script type="text/javascript" src="/js/wow.js"&gt;&lt;/script&gt;
-		&lt;script&gt;
-			new WOW().init();
-		&lt;/script&gt;
-
-			&lt;/body&gt;
-&lt;/html&gt;
- 
- </msg>
-<msg timestamp="20221010 10:55:34.155" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20221010 10:55:33.629" endtime="20221010 10:55:34.157"/>
+<suite id="s1-s1-s1-s1" name="Link" source="C:\MAMP\htdocs\AtividadesRobot\Robot\PesquisaEmAcao\link.robot">
+<test id="s1-s1-s1-s1-t1" name="Cenário 1: Acessando o site" line="12">
+<kw name="Abrir Site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://centauro.com.br/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221010 11:06:40.158" level="INFO">Opening browser 'chrome' to base url 'https://centauro.com.br/'.</msg>
+<status status="PASS" starttime="20221010 11:06:40.158" endtime="20221010 11:06:44.002"/>
 </kw>
-<status status="PASS" starttime="20221010 10:55:33.626" endtime="20221010 10:55:34.158"/>
+<status status="PASS" starttime="20221010 11:06:40.157" endtime="20221010 11:06:44.003"/>
+</kw>
+<status status="PASS" starttime="20221010 11:06:40.155" endtime="20221010 11:06:44.003"/>
 </test>
-<status status="PASS" starttime="20221010 10:55:33.500" endtime="20221010 10:55:34.161"/>
+<status status="PASS" starttime="20221010 11:06:39.869" endtime="20221010 11:06:44.006"/>
 </suite>
-<status status="PASS" starttime="20221010 10:55:33.494" endtime="20221010 10:55:34.166"/>
+<status status="PASS" starttime="20221010 11:06:39.862" endtime="20221010 11:06:44.014"/>
 </suite>
-<status status="PASS" starttime="20221010 10:55:33.489" endtime="20221010 10:55:34.169"/>
+<status status="PASS" starttime="20221010 11:06:39.857" endtime="20221010 11:06:44.020"/>
 </suite>
-<status status="PASS" starttime="20221010 10:55:33.457" endtime="20221010 10:55:34.172"/>
+<status status="PASS" starttime="20221010 11:06:39.808" endtime="20221010 11:06:44.026"/>
 </suite>
 <statistics>
 <total>
@@ -152,7 +35,7 @@
 <stat pass="1" fail="0" skip="0" id="s1" name="AtividadesRobot">AtividadesRobot</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1" name="Robot">AtividadesRobot.Robot</stat>
 <stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="PesquisaEmAcao">AtividadesRobot.Robot.PesquisaEmAcao</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Requisicao">AtividadesRobot.Robot.PesquisaEmAcao.Requisicao</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Link">AtividadesRobot.Robot.PesquisaEmAcao.Link</stat>
 </suite>
 </statistics>
 <errors>

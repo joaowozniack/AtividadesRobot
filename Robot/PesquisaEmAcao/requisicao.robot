@@ -2,5 +2,7 @@
 Library    RequestsLibrary
 
 *** Test Cases ***
-Quick Get Request Test
+Chamada GET:
     ${response}=    GET  https://www.centauro.com
+
+Chamada POST:

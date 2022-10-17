@@ -27,6 +27,4 @@ Caso de teste utilizando if/else
     
     ${items_on_page}=  Get Element Count  xpath://*[@id="inventory_container"]/div
 
-    Run Keyword IF  ${items_on_page} < 10  Test Keyword 1  
-    ...  ELSE IF  ${items_on_page} > 10  Test Keyword 2
-    ...  ELSE  Test Keyword 3
+    Run Keyword If  ${items_on_page} < 10  Test Keyword 1  ELSE IF  ${items_on_page} > 10  Test Keyword 2  ELSE  Test Keyword 3

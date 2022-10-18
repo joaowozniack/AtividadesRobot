@@ -1,75 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221018 12:00:18.011" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221018 12:33:31.558" rpa="false" schemaversion="3">
 <suite id="s1" name="AtividadesRobot" source="C:\MAMP\htdocs\AtividadesRobot">
 <suite id="s1-s1" name="Robot" source="C:\MAMP\htdocs\AtividadesRobot\Robot">
 <suite id="s1-s1-s1" name="ProjetoRA3" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3">
 <suite id="s1-s1-s1-s1" name="AlterarNomeCachorro" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3\AlterarNomeCachorro.robot">
-<test id="s1-s1-s1-s1-t1" name="Cenário 1: Alterar Cachorro" line="23">
+<test id="s1-s1-s1-s1-t1" name="Cenário 1: Alterar Cachorro" line="24">
 <kw name="Alterando Nome do Cachorro">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>http://localhost/HelpFriend/mostrarCachorro.php</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221018 12:00:18.313" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/mostrarCachorro.php'.</msg>
-<status status="PASS" starttime="20221018 12:00:18.312" endtime="20221018 12:00:20.166"/>
+<msg timestamp="20221018 12:33:32.642" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/mostrarCachorro.php'.</msg>
+<status status="PASS" starttime="20221018 12:33:32.640" endtime="20221018 12:33:35.742"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20221018 12:00:20.168" level="INFO">Clicking link 'xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a'.</msg>
-<status status="PASS" starttime="20221018 12:00:20.167" endtime="20221018 12:00:20.423"/>
+<msg timestamp="20221018 12:33:35.745" level="INFO">Clicking link 'xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a'.</msg>
+<status status="PASS" starttime="20221018 12:33:35.743" endtime="20221018 12:33:36.329"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name:nome</arg>
 <arg>${EMPTY}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221018 12:00:20.424" level="INFO">Typing text '' into text field 'name:nome'.</msg>
-<status status="PASS" starttime="20221018 12:00:20.424" endtime="20221018 12:00:20.534"/>
+<msg timestamp="20221018 12:33:36.332" level="INFO">Typing text '' into text field 'name:nome'.</msg>
+<status status="PASS" starttime="20221018 12:33:36.330" endtime="20221018 12:33:36.524"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>xpath://*[@id="cadastro"]/div/label[7]/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221018 12:00:20.535" level="INFO">Clicking button 'xpath://*[@id="cadastro"]/div/label[7]/button'.</msg>
-<status status="PASS" starttime="20221018 12:00:20.534" endtime="20221018 12:00:20.677"/>
+<msg timestamp="20221018 12:33:36.526" level="INFO">Clicking button 'xpath://*[@id="cadastro"]/div/label[7]/button'.</msg>
+<status status="PASS" starttime="20221018 12:33:36.524" endtime="20221018 12:33:36.842"/>
 </kw>
-<status status="PASS" starttime="20221018 12:00:18.312" endtime="20221018 12:00:20.678"/>
+<status status="PASS" starttime="20221018 12:33:32.639" endtime="20221018 12:33:36.843"/>
 </kw>
-<kw name="Get Text" library="SeleniumLibrary">
-<var>${id}</var>
-<arg>id=resultado</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20221018 12:00:20.715" level="INFO">${id} = Um registro atualizado!</msg>
-<status status="PASS" starttime="20221018 12:00:20.678" endtime="20221018 12:00:20.717"/>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20221018 12:33:36.856" level="INFO">${url} = http://localhost/HelpFriend/atualizacachorro_exe.php</msg>
+<status status="PASS" starttime="20221018 12:33:36.844" endtime="20221018 12:33:36.858"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${id}' == 'Um registro atualizado!'</arg>
-<arg>Test Keyword 2</arg>
-<arg>ELSE</arg>
+<arg>'${url}' == 'http://localhost/HelpFriend/atualizacachorro.php?id=6'</arg>
 <arg>Test Keyword 1</arg>
+<arg>ELSE</arg>
+<arg>Test Keyword 2</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <kw name="Test Keyword 2">
 <kw name="Log To Console" library="BuiltIn">
 <arg>executado keyword2 - erro na atualização do cachorro</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221018 12:00:20.721" endtime="20221018 12:00:20.722"/>
+<status status="PASS" starttime="20221018 12:33:36.862" endtime="20221018 12:33:36.864"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221018 12:00:20.722" endtime="20221018 12:00:22.874"/>
+<status status="PASS" starttime="20221018 12:33:36.864" endtime="20221018 12:33:39.319"/>
 </kw>
-<status status="PASS" starttime="20221018 12:00:20.719" endtime="20221018 12:00:22.874"/>
+<status status="PASS" starttime="20221018 12:33:36.861" endtime="20221018 12:33:39.319"/>
 </kw>
-<status status="PASS" starttime="20221018 12:00:20.718" endtime="20221018 12:00:22.875"/>
+<status status="PASS" starttime="20221018 12:33:36.860" endtime="20221018 12:33:39.320"/>
 </kw>
-<status status="PASS" starttime="20221018 12:00:18.310" endtime="20221018 12:00:22.875"/>
+<status status="PASS" starttime="20221018 12:33:32.634" endtime="20221018 12:33:39.321"/>
 </test>
-<status status="PASS" starttime="20221018 12:00:18.053" endtime="20221018 12:00:22.877"/>
+<status status="PASS" starttime="20221018 12:33:31.709" endtime="20221018 12:33:39.327"/>
 </suite>
-<status status="PASS" starttime="20221018 12:00:18.048" endtime="20221018 12:00:22.881"/>
+<status status="PASS" starttime="20221018 12:33:31.698" endtime="20221018 12:33:39.336"/>
 </suite>
-<status status="PASS" starttime="20221018 12:00:18.045" endtime="20221018 12:00:22.884"/>
+<status status="PASS" starttime="20221018 12:33:31.683" endtime="20221018 12:33:39.343"/>
 </suite>
-<status status="PASS" starttime="20221018 12:00:18.015" endtime="20221018 12:00:22.889"/>
+<status status="PASS" starttime="20221018 12:33:31.575" endtime="20221018 12:33:39.351"/>
 </suite>
 <statistics>
 <total>

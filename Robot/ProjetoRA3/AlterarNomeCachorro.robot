@@ -7,7 +7,8 @@ Library     SeleniumLibrary
 * Keywords *
 
 Test Keyword 1
-    Log To Console    executado keyword1 - cachorro atualizado com sucesso
+    Log To Console    executado keyword1 - passou no teste
+    Fail    This is a rather boring example...
     Close Browser
 
 Test Keyword 2
@@ -23,5 +24,10 @@ Alterando Nome do Cachorro
 Cenário 1: Alterar Cachorro
     Alterando Nome do Cachorro
 
-     ${id}=    Get Text    id=resultado
-    Run Keyword If  '${id}' == 'Um registro atualizado!'  Test Keyword 2  ELSE  Test Keyword 1
+    ${url}=   Get Location
+
+
+    
+    Run Keyword If  '${url}' == 'http://localhost/HelpFriend/atualizacachorro.php?id=6'  Test Keyword 1    
+    ...  ELSE  Test Keyword 2
+ 

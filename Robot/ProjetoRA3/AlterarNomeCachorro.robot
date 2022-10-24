@@ -19,6 +19,7 @@ Alterando Nome do Cachorro
     Click Link    xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a
     Input Text  name:nome  ${EMPTY}
     Click Button   xpath://*[@id="cadastro"]/div/label[7]/button
+    Click Button   xpath://*[@id="cadastro"]/div/label[7]/button
     
 * Test Cases *
 Cenário 1: Alterar Cachorro

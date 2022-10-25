@@ -14,7 +14,7 @@ Test Keyword 2
     Close Browser
 Deletando Cachorro da Instituição
     Open Browser   http://localhost/HelpFriend/mostrarCachorro.php  chrome
-    Click Link    xpath:/html/body/div/div/div/div/table/tbody/tr[3]/td[7]/a
+    Click Link    xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[7]/a
     Click Button    xpath:/html/body/div/div/div/div/form/p[5]/input[1]
 
 

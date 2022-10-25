@@ -1,184 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221025 08:44:52.373" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221025 11:19:38.338" rpa="false" schemaversion="3">
 <suite id="s1" name="AtividadesRobot" source="C:\MAMP\htdocs\AtividadesRobot">
 <suite id="s1-s1" name="Robot" source="C:\MAMP\htdocs\AtividadesRobot\Robot">
 <suite id="s1-s1-s1" name="ProjetoRA3" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3">
-<suite id="s1-s1-s1-s1" name="CadastroCachorro" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3\CadastroCachorro.robot">
-<test id="s1-s1-s1-s1-t1" name="Caso de teste HelpFriend - Cadastro de Cachorro sem nome" line="19">
+<suite id="s1-s1-s1-s1" name="DeletarCachorro" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3\DeletarCachorro.robot">
+<test id="s1-s1-s1-s1-t1" name="Cenário 1: Deletando Cachorro" line="22">
+<kw name="Deletando Cachorro da Instituição">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://localhost/HelpFriend/cadastroCachorro.php</arg>
+<arg>http://localhost/HelpFriend/mostrarCachorro.php</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221025 08:44:53.033" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/cadastroCachorro.php'.</msg>
-<status status="PASS" starttime="20221025 08:44:53.030" endtime="20221025 08:44:57.277"/>
+<msg timestamp="20221025 11:19:38.614" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/mostrarCachorro.php'.</msg>
+<status status="PASS" starttime="20221025 11:19:38.614" endtime="20221025 11:19:40.420"/>
 </kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221025 08:44:57.282" endtime="20221025 08:44:57.447"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>name:ano</arg>
-<arg>2</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20221025 08:44:57.452" level="INFO">Selecting options from selection list 'name:ano' by index 2.</msg>
-<status status="PASS" starttime="20221025 08:44:57.450" endtime="20221025 08:44:57.684"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>name:porte</arg>
-<arg>2</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20221025 08:44:57.685" level="INFO">Selecting options from selection list 'name:porte' by index 2.</msg>
-<status status="PASS" starttime="20221025 08:44:57.684" endtime="20221025 08:44:57.890"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>name:raca</arg>
-<arg>2</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20221025 08:44:57.893" level="INFO">Selecting options from selection list 'name:raca' by index 2.</msg>
-<status status="PASS" starttime="20221025 08:44:57.891" endtime="20221025 08:44:58.119"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:id_instituicao</arg>
-<arg>1</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221025 08:44:58.121" level="INFO">Typing text '1' into text field 'name:id_instituicao'.</msg>
-<status status="PASS" starttime="20221025 08:44:58.119" endtime="20221025 08:44:58.384"/>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[7]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221025 11:19:40.421" level="INFO">Clicking link 'xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[7]/a'.</msg>
+<status status="PASS" starttime="20221025 11:19:40.420" endtime="20221025 11:19:40.544"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://*[@id="cadastro"]/div/label[8]/button</arg>
+<arg>xpath:/html/body/div/div/div/div/form/p[5]/input[1]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221025 08:44:58.388" level="INFO">Clicking button 'xpath://*[@id="cadastro"]/div/label[8]/button'.</msg>
-<status status="PASS" starttime="20221025 08:44:58.386" endtime="20221025 08:44:58.675"/>
+<msg timestamp="20221025 11:19:40.545" level="INFO">Clicking button 'xpath:/html/body/div/div/div/div/form/p[5]/input[1]'.</msg>
+<status status="PASS" starttime="20221025 11:19:40.544" endtime="20221025 11:19:40.677"/>
 </kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${url}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20221025 08:44:58.694" level="INFO">${url} = http://localhost/HelpFriend/cadastroCachorro.php</msg>
-<status status="PASS" starttime="20221025 08:44:58.677" endtime="20221025 08:44:58.701"/>
+<status status="PASS" starttime="20221025 11:19:38.613" endtime="20221025 11:19:40.678"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${id}</var>
+<arg>id=resultado</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221025 11:19:40.719" level="INFO">${id} = Um cachorro excluído!</msg>
+<status status="PASS" starttime="20221025 11:19:40.678" endtime="20221025 11:19:40.720"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
-<arg>'${url}' == 'http://localhost/HelpFriend/cadastroCachorro.php'</arg>
+<arg>'${id}' == 'Um cachorro excluído!'</arg>
 <arg>Test Keyword 1</arg>
-<arg>ELSE IF</arg>
-<arg>'${url}' == 'http://localhost/HelpFriend/cadastroCachorro_exe.php'</arg>
-<arg>Test Keyword 2</arg>
 <arg>ELSE</arg>
-<arg>Test Keyword 3</arg>
+<arg>Test Keyword 2</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <kw name="Test Keyword 1">
 <kw name="Log To Console" library="BuiltIn">
-<arg>executado keyword1 - Teste realizado com sucesso</arg>
+<arg>executado keyword1 - cachorro excluído com sucesso</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221025 08:44:58.707" endtime="20221025 08:44:58.709"/>
+<status status="PASS" starttime="20221025 11:19:40.721" endtime="20221025 11:19:40.722"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221025 08:44:58.711" endtime="20221025 08:45:00.989"/>
+<status status="PASS" starttime="20221025 11:19:40.722" endtime="20221025 11:19:42.869"/>
 </kw>
-<status status="PASS" starttime="20221025 08:44:58.705" endtime="20221025 08:45:00.990"/>
+<status status="PASS" starttime="20221025 11:19:40.721" endtime="20221025 11:19:42.871"/>
 </kw>
-<status status="PASS" starttime="20221025 08:44:58.702" endtime="20221025 08:45:00.991"/>
+<status status="PASS" starttime="20221025 11:19:40.720" endtime="20221025 11:19:42.872"/>
 </kw>
-<doc>Caso de teste HelpFriend - Cadastro de Cachorro sem nome</doc>
-<status status="PASS" starttime="20221025 08:44:53.026" endtime="20221025 08:45:00.994"/>
+<status status="PASS" starttime="20221025 11:19:38.612" endtime="20221025 11:19:42.874"/>
 </test>
-<test id="s1-s1-s1-s1-t2" name="Caso de teste HelpFriend - Cadastro de Cachorro sem ano" line="36">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://localhost/HelpFriend/cadastroCachorro.php</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221025 08:45:01.013" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/cadastroCachorro.php'.</msg>
-<status status="PASS" starttime="20221025 08:45:01.010" endtime="20221025 08:45:03.565"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221025 08:45:03.569" endtime="20221025 08:45:03.738"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:nome</arg>
-<arg>bob</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221025 08:45:03.740" level="INFO">Typing text 'bob' into text field 'name:nome'.</msg>
-<status status="PASS" starttime="20221025 08:45:03.739" endtime="20221025 08:45:03.917"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>name:porte</arg>
-<arg>2</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20221025 08:45:03.919" level="INFO">Selecting options from selection list 'name:porte' by index 2.</msg>
-<status status="PASS" starttime="20221025 08:45:03.918" endtime="20221025 08:45:04.114"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>name:raca</arg>
-<arg>2</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20221025 08:45:04.116" level="INFO">Selecting options from selection list 'name:raca' by index 2.</msg>
-<status status="PASS" starttime="20221025 08:45:04.115" endtime="20221025 08:45:04.335"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name:id_instituicao</arg>
-<arg>1</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221025 08:45:04.338" level="INFO">Typing text '1' into text field 'name:id_instituicao'.</msg>
-<status status="PASS" starttime="20221025 08:45:04.337" endtime="20221025 08:45:04.626"/>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://*[@id="cadastro"]/div/label[8]/button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221025 08:45:04.630" level="INFO">Clicking button 'xpath://*[@id="cadastro"]/div/label[8]/button'.</msg>
-<status status="PASS" starttime="20221025 08:45:04.628" endtime="20221025 08:45:04.932"/>
-</kw>
-<kw name="Get Location" library="SeleniumLibrary">
-<var>${url}</var>
-<doc>Returns the current browser window URL.</doc>
-<msg timestamp="20221025 08:45:04.953" level="INFO">${url} = http://localhost/HelpFriend/cadastroCachorro.php</msg>
-<status status="PASS" starttime="20221025 08:45:04.934" endtime="20221025 08:45:04.956"/>
-</kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<arg>'${url}' == 'http://localhost/HelpFriend/cadastroCachorro.php'</arg>
-<arg>Test Keyword 1</arg>
-<arg>ELSE IF</arg>
-<arg>'${url}' == 'http://localhost/HelpFriend/cadastroCachorro_exe.php'</arg>
-<arg>Test Keyword 2</arg>
-<arg>ELSE</arg>
-<arg>Test Keyword 3</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<kw name="Test Keyword 1">
-<kw name="Log To Console" library="BuiltIn">
-<arg>executado keyword1 - Teste realizado com sucesso</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221025 08:45:04.959" endtime="20221025 08:45:04.961"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221025 08:45:04.961" endtime="20221025 08:45:07.150"/>
-</kw>
-<status status="PASS" starttime="20221025 08:45:04.958" endtime="20221025 08:45:07.151"/>
-</kw>
-<status status="PASS" starttime="20221025 08:45:04.957" endtime="20221025 08:45:07.152"/>
-</kw>
-<doc>Caso de teste HelpFriend - Cadastro de Cachorro sem ano</doc>
-<status status="PASS" starttime="20221025 08:45:01.003" endtime="20221025 08:45:07.155"/>
-</test>
-<status status="PASS" starttime="20221025 08:44:52.466" endtime="20221025 08:45:07.165"/>
+<status status="PASS" starttime="20221025 11:19:38.379" endtime="20221025 11:19:42.880"/>
 </suite>
-<status status="PASS" starttime="20221025 08:44:52.457" endtime="20221025 08:45:07.180"/>
+<status status="PASS" starttime="20221025 11:19:38.376" endtime="20221025 11:19:42.883"/>
 </suite>
-<status status="PASS" starttime="20221025 08:44:52.449" endtime="20221025 08:45:07.193"/>
+<status status="PASS" starttime="20221025 11:19:38.372" endtime="20221025 11:19:42.886"/>
 </suite>
-<status status="PASS" starttime="20221025 08:44:52.384" endtime="20221025 08:45:07.211"/>
+<status status="PASS" starttime="20221025 11:19:38.343" endtime="20221025 11:19:42.889"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="AtividadesRobot">AtividadesRobot</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1" name="Robot">AtividadesRobot.Robot</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="ProjetoRA3">AtividadesRobot.Robot.ProjetoRA3</stat>
-<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="CadastroCachorro">AtividadesRobot.Robot.ProjetoRA3.CadastroCachorro</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="AtividadesRobot">AtividadesRobot</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Robot">AtividadesRobot.Robot</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="ProjetoRA3">AtividadesRobot.Robot.ProjetoRA3</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="DeletarCachorro">AtividadesRobot.Robot.ProjetoRA3.DeletarCachorro</stat>
 </suite>
 </statistics>
 <errors>

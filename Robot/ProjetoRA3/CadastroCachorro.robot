@@ -27,7 +27,6 @@ Caso de teste HelpFriend - Cadastro de Cachorro sem nome
     Select From List By Index    name:raca    2
     Input Text  name:id_instituicao  1
     Input Text  name:descricao  descricao
-
     Click Button  xpath://*[@id="cadastro"]/div/label[8]/button
     
     ${url}=   Get Location

@@ -19,16 +19,11 @@ Alterando Nome do Cachorro
     Click Link    xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a
     Input Text  name:nome  ${EMPTY}
     Click Button   xpath://*[@id="cadastro"]/div/label[7]/button
-    Click Button   xpath://*[@id="cadastro"]/div/label[7]/button
     
 * Test Cases *
 Cenário 1: Alterar Cachorro
     Alterando Nome do Cachorro
-
     ${url}=   Get Location
-
-
-    
     Run Keyword If  '${url}' == 'http://localhost/HelpFriend/atualizacachorro.php?id=6'  Test Keyword 1    
     ...  ELSE  Test Keyword 2
  

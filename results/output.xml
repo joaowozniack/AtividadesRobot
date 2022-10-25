@@ -1,47 +1,418 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221024 11:10:33.601" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221024 22:30:02.161" rpa="false" schemaversion="3">
 <suite id="s1" name="AtividadesRobot" source="C:\MAMP\htdocs\AtividadesRobot">
 <suite id="s1-s1" name="Robot" source="C:\MAMP\htdocs\AtividadesRobot\Robot">
-<suite id="s1-s1-s1" name="AtividadeAvaliacao" source="C:\MAMP\htdocs\AtividadesRobot\Robot\AtividadeAvaliacao">
-<suite id="s1-s1-s1-s1" name="Teste" source="C:\MAMP\htdocs\AtividadesRobot\Robot\AtividadeAvaliacao\teste.robot">
-<test id="s1-s1-s1-s1-t1" name="Caso de teste 01" line="13">
-<kw name="keyword 1">
-<kw name="Generate Random String" library="String">
-<var>${palavra_aleatoria}</var>
-<arg>6</arg>
-<arg>[WORDS]</arg>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20221024 11:10:33.662" level="INFO">${palavra_aleatoria} = ODOD[R</msg>
-<status status="PASS" starttime="20221024 11:10:33.661" endtime="20221024 11:10:33.663"/>
+<suite id="s1-s1-s1" name="ProjetoRA3" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3">
+<suite id="s1-s1-s1-s1" name="AlterarCpfFuncionario" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3\AlterarCpfFuncionario.robot">
+<test id="s1-s1-s1-s1-t1" name="Cenário 1: Alterar Funcionário" line="23">
+<kw name="Alterando CPF de Funcionário">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost/HelpFriend/mostrarFuncionario.php</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 22:30:03.356" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/mostrarFuncionario.php'.</msg>
+<status status="PASS" starttime="20221024 22:30:03.356" endtime="20221024 22:30:06.167"/>
 </kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[7]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:06.173" level="INFO">Clicking link 'xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[7]/a'.</msg>
+<status status="PASS" starttime="20221024 22:30:06.170" endtime="20221024 22:30:06.426"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:cpf</arg>
+<arg>12312312344</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:06.426" level="INFO">Typing text '12312312344' into text field 'name:cpf'.</msg>
+<status status="PASS" starttime="20221024 22:30:06.426" endtime="20221024 22:30:06.595"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="cadastro"]/div/label[8]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:06.596" level="INFO">Clicking button 'xpath://*[@id="cadastro"]/div/label[8]/button'.</msg>
+<status status="PASS" starttime="20221024 22:30:06.596" endtime="20221024 22:30:07.000"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:03.356" endtime="20221024 22:30:07.002"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${id}</var>
+<arg>id=resultado</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:07.110" level="INFO">${id} = Um registro atualizado!</msg>
+<status status="PASS" starttime="20221024 22:30:07.004" endtime="20221024 22:30:07.110"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${id}' == 'Um registro atualizado!'</arg>
+<arg>Test Keyword 1</arg>
+<arg>ELSE</arg>
+<arg>Test Keyword 2</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Test Keyword 1">
 <kw name="Log To Console" library="BuiltIn">
-<arg>${Nome}${Sobrenome}${palavra_aleatoria}${email}</arg>
+<arg>executado keyword1 - funcionário atualizado com sucesso</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20221024 11:10:33.663" endtime="20221024 11:10:33.665"/>
+<status status="PASS" starttime="20221024 22:30:07.122" endtime="20221024 22:30:07.122"/>
 </kw>
-<status status="PASS" starttime="20221024 11:10:33.661" endtime="20221024 11:10:33.665"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221024 22:30:07.122" endtime="20221024 22:30:09.438"/>
 </kw>
-<status status="PASS" starttime="20221024 11:10:33.658" endtime="20221024 11:10:33.666"/>
+<status status="PASS" starttime="20221024 22:30:07.122" endtime="20221024 22:30:09.440"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:07.121" endtime="20221024 22:30:09.440"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:03.351" endtime="20221024 22:30:09.440"/>
 </test>
-<status status="PASS" starttime="20221024 11:10:33.648" endtime="20221024 11:10:33.668"/>
+<status status="PASS" starttime="20221024 22:30:02.366" endtime="20221024 22:30:09.450"/>
 </suite>
-<status status="PASS" starttime="20221024 11:10:33.643" endtime="20221024 11:10:33.671"/>
+<suite id="s1-s1-s1-s2" name="AlterarNomeCachorro" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3\AlterarNomeCachorro.robot">
+<test id="s1-s1-s1-s2-t1" name="Cenário 1: Alterar Cachorro" line="24">
+<kw name="Alterando Nome do Cachorro">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost/HelpFriend/mostrarCachorro.php</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 22:30:09.496" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/mostrarCachorro.php'.</msg>
+<status status="PASS" starttime="20221024 22:30:09.488" endtime="20221024 22:30:12.044"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:12.044" level="INFO">Clicking link 'xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a'.</msg>
+<status status="PASS" starttime="20221024 22:30:12.044" endtime="20221024 22:30:12.467"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:nome</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:12.467" level="INFO">Typing text '' into text field 'name:nome'.</msg>
+<status status="PASS" starttime="20221024 22:30:12.467" endtime="20221024 22:30:12.658"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="cadastro"]/div/label[7]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:12.658" level="INFO">Clicking button 'xpath://*[@id="cadastro"]/div/label[7]/button'.</msg>
+<status status="PASS" starttime="20221024 22:30:12.658" endtime="20221024 22:30:13.066"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:09.488" endtime="20221024 22:30:13.066"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20221024 22:30:13.085" level="INFO">${url} = http://localhost/HelpFriend/atualizacachorro_exe.php</msg>
+<status status="PASS" starttime="20221024 22:30:13.066" endtime="20221024 22:30:13.090"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${url}' == 'http://localhost/HelpFriend/atualizacachorro.php?id=6'</arg>
+<arg>Test Keyword 1</arg>
+<arg>ELSE</arg>
+<arg>Test Keyword 2</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Test Keyword 2">
+<kw name="Log To Console" library="BuiltIn">
+<arg>executado keyword2 - erro na atualização do cachorro</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221024 22:30:13.095" endtime="20221024 22:30:13.098"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221024 22:30:13.098" endtime="20221024 22:30:15.384"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:13.095" endtime="20221024 22:30:15.384"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:13.092" endtime="20221024 22:30:15.384"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:09.484" endtime="20221024 22:30:15.384"/>
+</test>
+<status status="PASS" starttime="20221024 22:30:09.464" endtime="20221024 22:30:15.398"/>
 </suite>
-<status status="PASS" starttime="20221024 11:10:33.637" endtime="20221024 11:10:33.674"/>
+<suite id="s1-s1-s1-s3" name="AlterarRacaCachorro" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3\AlterarRacaCachorro.robot">
+<test id="s1-s1-s1-s3-t1" name="Cenário 1: Alterar Cachorro" line="23">
+<kw name="Alterando Raca do Cachorro">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost/HelpFriend/mostrarCachorro.php</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 22:30:15.441" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/mostrarCachorro.php'.</msg>
+<status status="PASS" starttime="20221024 22:30:15.441" endtime="20221024 22:30:18.116"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:18.116" level="INFO">Clicking link 'xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a'.</msg>
+<status status="PASS" starttime="20221024 22:30:18.116" endtime="20221024 22:30:18.434"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name:raca</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221024 22:30:18.434" level="INFO">Selecting options from selection list 'name:raca' by index 3.</msg>
+<status status="PASS" starttime="20221024 22:30:18.434" endtime="20221024 22:30:18.733"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="cadastro"]/div/label[7]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:18.733" level="INFO">Clicking button 'xpath://*[@id="cadastro"]/div/label[7]/button'.</msg>
+<status status="PASS" starttime="20221024 22:30:18.733" endtime="20221024 22:30:19.004"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:15.433" endtime="20221024 22:30:19.006"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${id}</var>
+<arg>id=resultado</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:19.066" level="INFO">${id} = Um registro atualizado!</msg>
+<status status="PASS" starttime="20221024 22:30:19.006" endtime="20221024 22:30:19.066"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${id}' == 'Um registro atualizado!'</arg>
+<arg>Test Keyword 1</arg>
+<arg>ELSE</arg>
+<arg>Test Keyword 2</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Test Keyword 1">
+<kw name="Log To Console" library="BuiltIn">
+<arg>executado keyword1 - cachorro atualizado com sucesso</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221024 22:30:19.066" endtime="20221024 22:30:19.074"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221024 22:30:19.074" endtime="20221024 22:30:21.258"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:19.066" endtime="20221024 22:30:21.258"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:19.066" endtime="20221024 22:30:21.258"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:15.431" endtime="20221024 22:30:21.263"/>
+</test>
+<status status="PASS" starttime="20221024 22:30:15.411" endtime="20221024 22:30:21.270"/>
 </suite>
-<status status="PASS" starttime="20221024 11:10:33.606" endtime="20221024 11:10:33.676"/>
+<suite id="s1-s1-s1-s4" name="CadastroCachorro" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3\CadastroCachorro.robot">
+<test id="s1-s1-s1-s4-t1" name="Caso de teste HelpFriend - Cadastro de Cachorro sem nome" line="19">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost/HelpFriend/cadastroCachorro.php</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 22:30:21.315" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/cadastroCachorro.php'.</msg>
+<status status="PASS" starttime="20221024 22:30:21.310" endtime="20221024 22:30:23.589"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221024 22:30:23.589" endtime="20221024 22:30:23.753"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name:ano</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221024 22:30:23.757" level="INFO">Selecting options from selection list 'name:ano' by index 2.</msg>
+<status status="PASS" starttime="20221024 22:30:23.753" endtime="20221024 22:30:24.022"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name:porte</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221024 22:30:24.024" level="INFO">Selecting options from selection list 'name:porte' by index 2.</msg>
+<status status="PASS" starttime="20221024 22:30:24.022" endtime="20221024 22:30:24.225"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name:raca</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221024 22:30:24.227" level="INFO">Selecting options from selection list 'name:raca' by index 2.</msg>
+<status status="PASS" starttime="20221024 22:30:24.227" endtime="20221024 22:30:24.452"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:id_instituicao</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:24.455" level="INFO">Typing text '1' into text field 'name:id_instituicao'.</msg>
+<status status="PASS" starttime="20221024 22:30:24.452" endtime="20221024 22:30:24.710"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:descricao</arg>
+<arg>descricao</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:24.712" level="INFO">Typing text 'descricao' into text field 'name:descricao'.</msg>
+<msg timestamp="20221024 22:30:24.995" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221024 22:30:24.996" level="FAIL">Element with locator 'name:descricao' not found.</msg>
+<status status="FAIL" starttime="20221024 22:30:24.712" endtime="20221024 22:30:25.053"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="cadastro"]/div/label[8]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221024 22:30:25.053" endtime="20221024 22:30:25.056"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20221024 22:30:25.057" endtime="20221024 22:30:25.057"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${url}' == 'http://localhost/HelpFriend/cadastroCachorro.php'</arg>
+<arg>Test Keyword 1</arg>
+<arg>ELSE IF</arg>
+<arg>'${url}' == 'http://localhost/HelpFriend/cadastroCachorro_exe.php'</arg>
+<arg>Test Keyword 2</arg>
+<arg>ELSE</arg>
+<arg>Test Keyword 3</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20221024 22:30:25.058" endtime="20221024 22:30:25.059"/>
+</kw>
+<doc>Caso de teste HelpFriend - Cadastro de Cachorro sem nome</doc>
+<status status="FAIL" starttime="20221024 22:30:21.302" endtime="20221024 22:30:25.061">Element with locator 'name:descricao' not found.</status>
+</test>
+<test id="s1-s1-s1-s4-t2" name="Caso de teste HelpFriend - Cadastro de Cachorro sem ano" line="37">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost/HelpFriend/cadastroCachorro.php</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 22:30:25.068" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/cadastroCachorro.php'.</msg>
+<status status="PASS" starttime="20221024 22:30:25.066" endtime="20221024 22:30:27.553"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221024 22:30:27.553" endtime="20221024 22:30:27.700"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:nome</arg>
+<arg>bob</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:27.700" level="INFO">Typing text 'bob' into text field 'name:nome'.</msg>
+<status status="PASS" starttime="20221024 22:30:27.700" endtime="20221024 22:30:27.862"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name:porte</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221024 22:30:27.862" level="INFO">Selecting options from selection list 'name:porte' by index 2.</msg>
+<status status="PASS" starttime="20221024 22:30:27.862" endtime="20221024 22:30:28.049"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>name:raca</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20221024 22:30:28.049" level="INFO">Selecting options from selection list 'name:raca' by index 2.</msg>
+<status status="PASS" starttime="20221024 22:30:28.049" endtime="20221024 22:30:28.263"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:id_instituicao</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:28.263" level="INFO">Typing text '1' into text field 'name:id_instituicao'.</msg>
+<status status="PASS" starttime="20221024 22:30:28.263" endtime="20221024 22:30:28.425"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:descricao</arg>
+<arg>descricao</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:28.429" level="INFO">Typing text 'descricao' into text field 'name:descricao'.</msg>
+<msg timestamp="20221024 22:30:28.730" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221024 22:30:28.730" level="FAIL">Element with locator 'name:descricao' not found.</msg>
+<status status="FAIL" starttime="20221024 22:30:28.428" endtime="20221024 22:30:28.730"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="cadastro"]/div/label[8]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20221024 22:30:28.746" endtime="20221024 22:30:28.746"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20221024 22:30:28.746" endtime="20221024 22:30:28.746"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${url}' == 'http://localhost/HelpFriend/cadastroCachorro.php'</arg>
+<arg>Test Keyword 1</arg>
+<arg>ELSE IF</arg>
+<arg>'${url}' == 'http://localhost/HelpFriend/cadastroCachorro_exe.php'</arg>
+<arg>Test Keyword 2</arg>
+<arg>ELSE</arg>
+<arg>Test Keyword 3</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20221024 22:30:28.746" endtime="20221024 22:30:28.746"/>
+</kw>
+<doc>Caso de teste HelpFriend - Cadastro de Cachorro sem ano</doc>
+<status status="FAIL" starttime="20221024 22:30:25.061" endtime="20221024 22:30:28.746">Element with locator 'name:descricao' not found.</status>
+</test>
+<status status="FAIL" starttime="20221024 22:30:21.283" endtime="20221024 22:30:28.746"/>
+</suite>
+<suite id="s1-s1-s1-s5" name="DeletarCachorro" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3\DeletarCachorro.robot">
+<test id="s1-s1-s1-s5-t1" name="Cenário 1: Deletando Cachorro" line="22">
+<kw name="Deletando Cachorro da Instituição">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost/HelpFriend/mostrarCachorro.php</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221024 22:30:28.777" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/mostrarCachorro.php'.</msg>
+<status status="PASS" starttime="20221024 22:30:28.777" endtime="20221024 22:30:31.658"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div/table/tbody/tr[3]/td[7]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:31.661" level="INFO">Clicking link 'xpath:/html/body/div/div/div/div/table/tbody/tr[3]/td[7]/a'.</msg>
+<status status="PASS" starttime="20221024 22:30:31.661" endtime="20221024 22:30:31.823"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div/form/p[5]/input[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:31.826" level="INFO">Clicking button 'xpath:/html/body/div/div/div/div/form/p[5]/input[1]'.</msg>
+<status status="PASS" starttime="20221024 22:30:31.823" endtime="20221024 22:30:31.968"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:28.777" endtime="20221024 22:30:31.968"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${id}</var>
+<arg>id=resultado</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20221024 22:30:32.010" level="INFO">${id} = Um cachorro excluído!</msg>
+<status status="PASS" starttime="20221024 22:30:31.970" endtime="20221024 22:30:32.011"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${id}' == 'Um cachorro excluído!'</arg>
+<arg>Test Keyword 1</arg>
+<arg>ELSE</arg>
+<arg>Test Keyword 2</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Test Keyword 1">
+<kw name="Log To Console" library="BuiltIn">
+<arg>executado keyword1 - cachorro excluído com sucesso</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221024 22:30:32.013" endtime="20221024 22:30:32.013"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221024 22:30:32.013" endtime="20221024 22:30:34.189"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:32.013" endtime="20221024 22:30:34.189"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:32.013" endtime="20221024 22:30:34.189"/>
+</kw>
+<status status="PASS" starttime="20221024 22:30:28.762" endtime="20221024 22:30:34.189"/>
+</test>
+<status status="PASS" starttime="20221024 22:30:28.762" endtime="20221024 22:30:34.189"/>
+</suite>
+<status status="FAIL" starttime="20221024 22:30:02.341" endtime="20221024 22:30:34.197"/>
+</suite>
+<status status="FAIL" starttime="20221024 22:30:02.329" endtime="20221024 22:30:34.211"/>
+</suite>
+<status status="FAIL" starttime="20221024 22:30:02.186" endtime="20221024 22:30:34.219"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="2" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="AtividadesRobot">AtividadesRobot</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Robot">AtividadesRobot.Robot</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="AtividadeAvaliacao">AtividadesRobot.Robot.AtividadeAvaliacao</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Teste">AtividadesRobot.Robot.AtividadeAvaliacao.Teste</stat>
+<stat pass="4" fail="2" skip="0" id="s1" name="AtividadesRobot">AtividadesRobot</stat>
+<stat pass="4" fail="2" skip="0" id="s1-s1" name="Robot">AtividadesRobot.Robot</stat>
+<stat pass="4" fail="2" skip="0" id="s1-s1-s1" name="ProjetoRA3">AtividadesRobot.Robot.ProjetoRA3</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="AlterarCpfFuncionario">AtividadesRobot.Robot.ProjetoRA3.AlterarCpfFuncionario</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s2" name="AlterarNomeCachorro">AtividadesRobot.Robot.ProjetoRA3.AlterarNomeCachorro</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s3" name="AlterarRacaCachorro">AtividadesRobot.Robot.ProjetoRA3.AlterarRacaCachorro</stat>
+<stat pass="0" fail="2" skip="0" id="s1-s1-s1-s4" name="CadastroCachorro">AtividadesRobot.Robot.ProjetoRA3.CadastroCachorro</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s5" name="DeletarCachorro">AtividadesRobot.Robot.ProjetoRA3.DeletarCachorro</stat>
 </suite>
 </statistics>
 <errors>

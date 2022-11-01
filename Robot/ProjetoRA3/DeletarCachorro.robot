@@ -19,7 +19,7 @@ Deletando Cachorro da Instituição
 
 
 *** Test Cases ***
-Cenário 1: Deletando Cachorro
+Caso de Teste 1: Deletando Cachorro
     Deletando Cachorro da Instituição
 
     ${id}=    Get Text    id=resultado

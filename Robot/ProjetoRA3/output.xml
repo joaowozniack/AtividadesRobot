@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221101 12:11:41.745" rpa="false" schemaversion="3">
+<suite id="s1" name="AlterarNomeCachorro" source="C:\MAMP\htdocs\AtividadesRobot\Robot\ProjetoRA3\AlterarNomeCachorro.robot">
+<test id="s1-t1" name="Cenário 1: Alterar Cachorro" line="29">
+<kw name="Abrir o navegador na pagina de mostrar cachorro">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost/HelpFriend/mostrarCachorro.php</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221101 12:11:42.312" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/mostrarCachorro.php'.</msg>
+<status status="PASS" starttime="20221101 12:11:42.312" endtime="20221101 12:11:44.801"/>
+</kw>
+<status status="PASS" starttime="20221101 12:11:42.312" endtime="20221101 12:11:44.802"/>
+</kw>
+<kw name="Clicar no botao de alteracao do primeiro cachorro">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221101 12:11:44.808" level="INFO">Clicking link 'xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a'.</msg>
+<status status="PASS" starttime="20221101 12:11:44.804" endtime="20221101 12:11:45.440"/>
+</kw>
+<status status="PASS" starttime="20221101 12:11:44.802" endtime="20221101 12:11:45.442"/>
+</kw>
+<kw name="Apagar o nome do campo nome">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:nome</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221101 12:11:45.448" level="INFO">Typing text '' into text field 'name:nome'.</msg>
+<status status="PASS" starttime="20221101 12:11:45.442" endtime="20221101 12:11:45.708"/>
+</kw>
+<status status="PASS" starttime="20221101 12:11:45.442" endtime="20221101 12:11:45.708"/>
+</kw>
+<kw name="Salvar alteracao">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="cadastro"]/div/label[7]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221101 12:11:45.710" level="INFO">Clicking button 'xpath://*[@id="cadastro"]/div/label[7]/button'.</msg>
+<status status="PASS" starttime="20221101 12:11:45.710" endtime="20221101 12:11:46.141"/>
+</kw>
+<status status="PASS" starttime="20221101 12:11:45.710" endtime="20221101 12:11:46.141"/>
+</kw>
+<kw name="Escrever o nome no campo nome">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:nome</arg>
+<arg>Sansão</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221101 12:11:46.143" level="INFO">Typing text 'Sansão' into text field 'name:nome'.</msg>
+<msg timestamp="20221101 12:11:46.399" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221101 12:11:46.399" level="FAIL">Element with locator 'name:nome' not found.</msg>
+<status status="FAIL" starttime="20221101 12:11:46.143" endtime="20221101 12:11:46.442"/>
+</kw>
+<status status="FAIL" starttime="20221101 12:11:46.143" endtime="20221101 12:11:46.448"/>
+</kw>
+<kw name="Salvar alteracao">
+<status status="NOT RUN" starttime="20221101 12:11:46.450" endtime="20221101 12:11:46.450"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="NOT RUN" starttime="20221101 12:11:46.451" endtime="20221101 12:11:46.451"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${url}' == 'http://localhost/HelpFriend/atualizacachorro.php?id=6'</arg>
+<arg>Test Keyword 1</arg>
+<arg>ELSE</arg>
+<arg>Test Keyword 2</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20221101 12:11:46.452" endtime="20221101 12:11:46.452"/>
+</kw>
+<status status="FAIL" starttime="20221101 12:11:42.312" endtime="20221101 12:11:46.453">Element with locator 'name:nome' not found.</status>
+</test>
+<test id="s1-t2" name="Dado que estou na página de alterar dados de cachorro" line="42">
+<kw name="Abrir o navegador na pagina de mostrar cachorro">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost/HelpFriend/mostrarCachorro.php</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221101 12:11:46.459" level="INFO">Opening browser 'chrome' to base url 'http://localhost/HelpFriend/mostrarCachorro.php'.</msg>
+<status status="PASS" starttime="20221101 12:11:46.459" endtime="20221101 12:11:49.118"/>
+</kw>
+<status status="PASS" starttime="20221101 12:11:46.459" endtime="20221101 12:11:49.118"/>
+</kw>
+<kw name="Clicar no botao de alteracao do primeiro cachorro">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221101 12:11:49.122" level="INFO">Clicking link 'xpath:/html/body/div/div/div/div/table/tbody/tr[2]/td[6]/a'.</msg>
+<status status="PASS" starttime="20221101 12:11:49.122" endtime="20221101 12:11:49.465"/>
+</kw>
+<status status="PASS" starttime="20221101 12:11:49.122" endtime="20221101 12:11:49.465"/>
+</kw>
+<status status="PASS" starttime="20221101 12:11:46.459" endtime="20221101 12:11:49.465"/>
+</test>
+<test id="s1-t3" name="Quando apagar o nome do cachorro" line="45">
+<kw name="Apagar o nome do campo nome">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:nome</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221101 12:11:49.465" level="INFO">Typing text '' into text field 'name:nome'.</msg>
+<status status="PASS" starttime="20221101 12:11:49.465" endtime="20221101 12:11:49.613"/>
+</kw>
+<status status="PASS" starttime="20221101 12:11:49.465" endtime="20221101 12:11:49.613"/>
+</kw>
+<kw name="Salvar alteracao">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="cadastro"]/div/label[7]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221101 12:11:49.615" level="INFO">Clicking button 'xpath://*[@id="cadastro"]/div/label[7]/button'.</msg>
+<status status="PASS" starttime="20221101 12:11:49.615" endtime="20221101 12:11:49.985"/>
+</kw>
+<status status="PASS" starttime="20221101 12:11:49.614" endtime="20221101 12:11:49.993"/>
+</kw>
+<status status="PASS" starttime="20221101 12:11:49.465" endtime="20221101 12:11:49.995"/>
+</test>
+<test id="s1-t4" name="Então inserir o nome no campo nome" line="48">
+<kw name="Escrever o nome no campo nome">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:nome</arg>
+<arg>Sansão</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221101 12:11:50.003" level="INFO">Typing text 'Sansão' into text field 'name:nome'.</msg>
+<msg timestamp="20221101 12:11:50.346" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221101 12:11:50.346" level="FAIL">Element with locator 'name:nome' not found.</msg>
+<status status="FAIL" starttime="20221101 12:11:50.003" endtime="20221101 12:11:50.346"/>
+</kw>
+<status status="FAIL" starttime="20221101 12:11:50.002" endtime="20221101 12:11:50.354"/>
+</kw>
+<kw name="Salvar alteracao">
+<status status="NOT RUN" starttime="20221101 12:11:50.356" endtime="20221101 12:11:50.356"/>
+</kw>
+<status status="FAIL" starttime="20221101 12:11:50.000" endtime="20221101 12:11:50.356">Element with locator 'name:nome' not found.</status>
+</test>
+<status status="FAIL" starttime="20221101 12:11:41.746" endtime="20221101 12:11:50.358"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="2" skip="0" id="s1" name="AlterarNomeCachorro">AlterarNomeCachorro</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
